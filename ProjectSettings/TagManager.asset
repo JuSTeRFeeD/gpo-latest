@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Damageable
+  - ParticlesController
+  - DropsController
+  - DropItem
   layers:
   - Default
   - TransparentFX
@@ -13,6 +17,8 @@ TagManager:
   - UI
   - 
   - 
+  - Objects
+  - Entities
   - 
   - 
   - 
@@ -34,10 +40,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Minimap
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 1166980041
     locked: 0

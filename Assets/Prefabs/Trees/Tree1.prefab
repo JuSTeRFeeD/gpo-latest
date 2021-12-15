@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 9174589681197917350}
   - component: {fileID: 6323080798355685996}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9174589681197917350
 Transform:
@@ -49,7 +49,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,12 +93,13 @@ GameObject:
   - component: {fileID: 2894082219351671867}
   - component: {fileID: 3732316676821842410}
   - component: {fileID: 3339824502500310469}
-  m_Layer: 0
+  - component: {fileID: -8857737909174686768}
+  m_Layer: 8
   m_Name: Tree1
-  m_TagString: Untagged
+  m_TagString: Damageable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2894082219351671867
 Transform:
@@ -142,3 +143,21 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
+--- !u!114 &-8857737909174686768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732316676821842411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d61a9377ae0ff04a8c6334edc001be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resources:
+  - {fileID: 11400000, guid: affcd79289a23f94f9840246542d0ded, type: 2}
+  scaleOnDamage: 1
+  hitEffectName: takeDamage
+  godMode: 0
+  healthAmount: 3

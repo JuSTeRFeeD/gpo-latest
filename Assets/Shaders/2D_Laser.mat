@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2D_Laser
+  m_Shader: {fileID: -6465566751694194690, guid: 329a636c11142ef4b9e3e7349d63cee2,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - Vector1_44FA6F72: 3
+    - Vector1_7BD7C20C: 20
+    - Vector1_AC7B3BD7: 60
+    m_Colors:
+    - Color_F6D01BA9: {r: 0, g: 2.5254903, b: 2.9960785, a: 1}
+    - Vector2_895006F5: {r: -1, g: 0, b: 0, a: 0}

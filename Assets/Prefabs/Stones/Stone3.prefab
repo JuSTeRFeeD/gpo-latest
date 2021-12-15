@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 4196334726614197513}
   - component: {fileID: 4196334726614197512}
   - component: {fileID: 758481943477916537}
-  m_Layer: 0
+  - component: {fileID: 8069468754711523721}
+  m_Layer: 8
   m_Name: Stone3
-  m_TagString: Untagged
+  m_TagString: Damageable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4196334726614197513
 Transform:
@@ -60,6 +61,24 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
+--- !u!114 &8069468754711523721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4196334726614197515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d61a9377ae0ff04a8c6334edc001be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resources:
+  - {fileID: 11400000, guid: 92a023379a795ad4e84835d108635160, type: 2}
+  scaleOnDamage: 1
+  hitEffectName: takeDamage
+  godMode: 0
+  healthAmount: 4
 --- !u!1 &4196334726837715002
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,12 +89,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4196334726837715003}
   - component: {fileID: 4196334726837715000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4196334726837715003
 Transform:
@@ -109,7 +128,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
