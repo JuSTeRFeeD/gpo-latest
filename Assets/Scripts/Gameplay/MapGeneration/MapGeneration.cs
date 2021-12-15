@@ -105,6 +105,7 @@ public class MapGeneration : MonoBehaviour
     public TextMeshProUGUI seedTxt;
     public TextMeshProUGUI mapSizeTxt;
     public TextMeshProUGUI sitesCountTxt;
+    public PerlinNoiseVisualizer visualizer;
     public void IncSeed()
     {
         __devSeed++;
@@ -184,6 +185,8 @@ public class MapGeneration : MonoBehaviour
     /// </summary>
     private void GenerateNewMap()
     {
+        visualizer.RegenerateTexture(mapSize, mapSize, scaler, 0, 0); // DEMO ONLY
+        
         ClearMap(); // Clearing objects & tileset
         SpreadPoints(); // Voronoi
         
@@ -273,7 +276,7 @@ public class MapGeneration : MonoBehaviour
     /// </summary>
     private void FillVoronoiGhostMap()
     {
-        voronoiMap = new int[mapSize, mapSize];
+        voronoiMap = new int[mapSize + 64, mapSize + 64];
         for (var i = 0; i < ge.Count; i++)
         {
             var p1 = new Vector3Int((int)ge[i].x1, (int)ge[i].y1, 0);
@@ -309,8 +312,8 @@ public class MapGeneration : MonoBehaviour
     private void FillTilesInRadius()
     {
         var perlinPointsByBiom = new List<Vector3Int>[biomes.Count];
-        var offsetX = Random.Range(0, 10);
-        var offsetY = Random.Range(0, 10);
+        var offsetX = 0; //Random.Range(0, 10); // TODO: вернуть (only for demo)
+        var offsetY = 0; //Random.Range(0, 10);
         for (var i = 0; i < biomes.Count; i++)
         {
             perlinPointsByBiom[i] = (CalcNoise(biomes[i].min, biomes[i].max, offsetX, offsetY, biomesPerlinScaler));

@@ -40,7 +40,7 @@ public class LaserWeapon : WeaponBase
             if (health)
             {
                 currentCooldown = cooldown;
-                health.TakeDamage(damage);
+                health.TakeDamage(damage, transform.parent.parent.gameObject);
             }
         }
     }

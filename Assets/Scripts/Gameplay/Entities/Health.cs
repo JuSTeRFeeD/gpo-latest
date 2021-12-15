@@ -35,7 +35,7 @@ public class Health : MonoBehaviour
         }
     }
     
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, GameObject from = null)
     {
         if (this.hitEffectName != null)
         {
@@ -50,12 +50,21 @@ public class Health : MonoBehaviour
         this._currentHealth -= damage;
         if (this._currentHealth <= 0)
         {
-            Death();
+            Death(from);
         }
     }
     
-    private void Death()
+    private void Death(GameObject from = null)
     {
+        if (from != null)
+        {
+            if (from.CompareTag("Player"))
+            {
+                from.GetComponent<Leveling>().AddExp(5);
+            }
+        }
+        // TODO: для игрока можно сделать потерую случайных 50% предметов
+        
         foreach (var res in resources)
         {
             _dropsController.DropItem(res.data, transform.position);

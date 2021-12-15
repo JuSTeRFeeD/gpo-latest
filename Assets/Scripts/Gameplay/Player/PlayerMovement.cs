@@ -42,14 +42,15 @@ public class PlayerMovement : MonoBehaviour
         prevX = horizontal;
         prevY = vertical;
         
-        animator.SetBool(animIsWalk, horizontal != 0 || vertical != 0);
-        if (horizontal > 0) spriteRenderer.flipX = true;
-        else if (horizontal < 0) spriteRenderer.flipX = false;
-        animator.SetInteger(animSpeedX, horizontal != 0 ? 1 : 0);
-        
-        if (vertical > 0) animator.SetInteger(animSpeedY, 1);
-        else if (vertical < 0) animator.SetInteger(animSpeedY, -1);
-        else animator.SetInteger(animSpeedY, 0);
+        // Animations:
+        // animator.SetBool(animIsWalk, horizontal != 0 || vertical != 0);
+        // if (horizontal > 0) spriteRenderer.flipX = true;
+        // else if (horizontal < 0) spriteRenderer.flipX = false;
+        // animator.SetInteger(animSpeedX, horizontal != 0 ? 1 : 0);
+        //
+        // if (vertical > 0) animator.SetInteger(animSpeedY, 1);
+        // else if (vertical < 0) animator.SetInteger(animSpeedY, -1);
+        // else animator.SetInteger(animSpeedY, 0);
     }
 
     private void FixedUpdate()
