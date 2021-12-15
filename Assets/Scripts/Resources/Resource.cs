@@ -14,6 +14,7 @@ public class ResourceData
 {
     public Sprite sprite;
     public string resourceName;
+    [TextArea]
     public string description;
     public int count = 0;
 }

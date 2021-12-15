@@ -106,6 +106,7 @@ public class MapGeneration : MonoBehaviour
     public TextMeshProUGUI mapSizeTxt;
     public TextMeshProUGUI sitesCountTxt;
     public PerlinNoiseVisualizer visualizer;
+    public CameraFollow cameraFollow;
     public void IncSeed()
     {
         __devSeed++;
@@ -133,6 +134,7 @@ public class MapGeneration : MonoBehaviour
     public void Regenerate()
     {
         GenerateNewMap();
+        cameraFollow.ResetPosition();
     }
     /*TEMPORARY*/
     
@@ -185,7 +187,7 @@ public class MapGeneration : MonoBehaviour
     /// </summary>
     private void GenerateNewMap()
     {
-        visualizer.RegenerateTexture(mapSize, mapSize, scaler, 0, 0); // DEMO ONLY
+        // visualizer.RegenerateTexture(mapSize, mapSize, scaler, 0, 0); // DEMO ONLY
         
         ClearMap(); // Clearing objects & tileset
         SpreadPoints(); // Voronoi

@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
         if (!other.CompareTag("DropItem")) return;
         var dropItem = other.GetComponent<DropItem>();
         if (!dropItem) return;
+        if (!inventoryUI.HasEmptySlots()) return;
         var resData = dropItem.Pickup();
         inventoryUI.AddNewItem(resData);
     }

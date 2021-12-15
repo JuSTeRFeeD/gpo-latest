@@ -36,6 +36,7 @@ public class TakeDamageScaler : MonoBehaviour
         var current = time / 2;
         while (current > 0)
         {
+            if (!item) yield break;
             current -= Time.deltaTime;
             item.localScale = Vector3.Lerp (item.transform.localScale, targetScale, speed * Time.deltaTime);
             yield return null;
@@ -44,6 +45,7 @@ public class TakeDamageScaler : MonoBehaviour
         current = time / 2;
         while (current > 0)
         {
+            if (!item) yield break;
             current -= Time.deltaTime;
             item.localScale = Vector3.Lerp (item.transform.localScale, initScale, speed * Time.deltaTime);
             yield return null;

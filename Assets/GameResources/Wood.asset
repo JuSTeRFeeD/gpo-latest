@@ -16,4 +16,5 @@ MonoBehaviour:
     sprite: {fileID: -7248506988745690217, guid: 3d65dfa036ea0584b86ea333d1b04fc7,
       type: 3}
     resourceName: Wood
-    description: 
+    description: Just a wood...
+    count: 0

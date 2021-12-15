@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class PerlinNoiseVisualizer : MonoBehaviour
 {
-    private Renderer _renderer;
+    private SpriteRenderer _renderer;
     public int width = 256;
     public int height = 256;
-    public float scale = 1;
+    public float scale = 30;
     public float xOrg = 0;
     public float yOrg = 0;
     
     private void Awake()
     {
-        _renderer = GetComponent<Renderer>();
-        // RegenerateTexture(width, height, scale, xOrg, yOrg);
+        _renderer = GetComponent<SpriteRenderer>();
+        RegenerateTexture(width, height, scale, xOrg, yOrg);
     }
 
     public void RegenerateTexture(int _width = 256, int _height = 256, float _scale = 1, float _xOrg = 0, float _yOrg = 0)
@@ -39,6 +39,6 @@ public class PerlinNoiseVisualizer : MonoBehaviour
             }
             
         }
-        _renderer.material.mainTexture = texture;
+        _renderer.sprite = Sprite.Create(texture, new Rect(0, 0, 256, 256),new Vector2(0.5f,0.5f),100);
     }
 }

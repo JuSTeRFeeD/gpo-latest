@@ -16,11 +16,16 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
-        transform.position = target.position;
+        ResetPosition();
     }
 
     private void Update()
     {
         transform.position = Vector2.SmoothDamp(transform.position, target.position, ref _vel, smooth, maxSpeed);
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = target.position;
     }
 }

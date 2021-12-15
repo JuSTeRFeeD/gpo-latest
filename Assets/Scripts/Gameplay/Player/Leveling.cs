@@ -17,7 +17,6 @@ public class Leveling : MonoBehaviour
 
     public void AddExp(int value)
     {
-        Debug.Log("added" + value);
         CurrentExp += value;
         if (CurrentExp > LevelExp)
         {

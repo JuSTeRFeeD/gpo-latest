@@ -160,4 +160,4 @@ MonoBehaviour:
   scaleOnDamage: 1
   hitEffectName: takeDamage
   godMode: 0
-  healthAmount: 4
+  healthAmount: 2

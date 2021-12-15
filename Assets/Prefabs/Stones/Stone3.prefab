@@ -78,7 +78,7 @@ MonoBehaviour:
   scaleOnDamage: 1
   hitEffectName: takeDamage
   godMode: 0
-  healthAmount: 4
+  healthAmount: 2
 --- !u!1 &4196334726837715002
 GameObject:
   m_ObjectHideFlags: 0
